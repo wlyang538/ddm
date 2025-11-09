@@ -217,7 +217,7 @@ class DDMClassifier(nn.Module):
                 skip_special_tokens=False
             )
             # print(f"[Sample {b}] After masking:\n{text_after_mask}\n")
-            with open("sample_after_mask.txt", "w", encoding="utf-8") as f:
+            with open("sample_after_mask.txt", "a", encoding="utf-8") as f:
                 f.write(f"[Sample {b}] After masking:\n{text_after_mask}\n\n")
             # attention mask 不需要改，仍然沿用原 attention_mask
             # 因为 [MASK] 应该被正常注意到
